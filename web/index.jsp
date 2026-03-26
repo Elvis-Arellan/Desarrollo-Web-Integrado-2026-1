@@ -12,6 +12,7 @@
     <body>
         <h1>Jugando con los param</h1>
         <hr>
+
         <table border="1.5">
             <tr>
                 <th><a href="index.jsp?ok=true">Ok</a></th>
@@ -20,15 +21,19 @@
             <tr>
                 <td>
                     <%
-                        if ("true".equals(ok)) {
-                            out.print("OK: status 200");
+                        if (ok == null) {
+                            out.print("<p>click enlace</p>");
+                        } else if ("true".equals(ok)) {
+                            out.print("<p style='color:green;'>status 200</p>");
                         }
                     %>
                 </td>
                 <td>
                     <%
-                        if ("true".equals(error)) {
-                            out.print("Error: Algo salio mal");
+                        if (error == null) {
+                            out.print("<p>click enlace</p>");
+                        } else if ("true".equals(error)) {
+                            out.print(" <p style='color:red;'>Algo salio mal</p>");
                         }
                     %> 
                 </td>
