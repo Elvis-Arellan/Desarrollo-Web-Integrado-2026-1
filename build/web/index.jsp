@@ -1,7 +1,7 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%
-    String ok = request.getParameter("ok"); 
-    String error = request.getParameter("error"); 
+    String ok = request.getParameter("ok");
+    String error = request.getParameter("error");
 %>
 <!DOCTYPE html>
 <html>
@@ -10,18 +10,29 @@
         <title>Primer jsp DWI</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
-        <a href="index.jsp?ok=true">Mensaje de Status 200</a>
-        <br>
-        <a href="index.jsp?error=true">Mensaje de Error</a>
-        
-        <%
-           if("true".equals(ok)){
-               out.print("<p style='color:green;'>OK: status 200</p>");
-           }
-           if("true".equals(error)){
-               out.print("<p style='color:red;'>Error: Algo salio mal</p>");
-           }
-        %>
+        <h1>Jugando con los param</h1>
+        <hr>
+        <table border="1.5">
+            <tr>
+                <th><a href="index.jsp?ok=true">Ok</a></th>
+                <th><a href="index.jsp?error=true">Error</a></th>
+            </tr>
+            <tr>
+                <td>
+                    <%
+                        if ("true".equals(ok)) {
+                            out.print("OK: status 200");
+                        }
+                    %>
+                </td>
+                <td>
+                    <%
+                        if ("true".equals(error)) {
+                            out.print("Error: Algo salio mal");
+                        }
+                    %> 
+                </td>
+            </tr>
+        </table>
     </body>
 </html>
