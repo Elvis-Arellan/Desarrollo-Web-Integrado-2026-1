@@ -11,15 +11,16 @@
     </head>
     <body>
         <h1>Hello World!</h1>
-        <a href="index.jsp?ok=true">Ok</a>
-        <a href="index.jsp?error=true">Error</a>
+        <a href="index.jsp?ok=true">Mensaje de Status 200</a>
+        <br>
+        <a href="index.jsp?error=true">Mensaje de Error</a>
         
         <%
            if("true".equals(ok)){
-               out.print("<p>OK: status 200</p>");
+               out.print("<p style='color:green;'>OK: status 200</p>");
            }
            if("true".equals(error)){
-               out.print("<p>Error: Algo salio mal</p>");
+               out.print("<p style='color:red;'>Error: Algo salio mal</p>");
            }
         %>
     </body>
