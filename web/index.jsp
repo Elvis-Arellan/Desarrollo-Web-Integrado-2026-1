@@ -22,7 +22,7 @@
                 <td>
                     <%
                         if (ok == null) {
-                            out.print("<p>click enlace</p>");
+                            out.print("<p>Ver status</p>");
                         } else if ("true".equals(ok)) {
                             out.print("<p style='color:green;'>status 200</p>");
                         }
@@ -31,7 +31,7 @@
                 <td>
                     <%
                         if (error == null) {
-                            out.print("<p>click enlace</p>");
+                            out.print("<p>Ver status</p>");
                         } else if ("true".equals(error)) {
                             out.print(" <p style='color:red;'>Algo salio mal</p>");
                         }
