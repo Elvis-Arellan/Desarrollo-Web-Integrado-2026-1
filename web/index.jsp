@@ -7,10 +7,10 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Primer jsp DWI</title>
+        <title>Scriptles</title>
     </head>
     <body>
-        <h1>Jugando con los param</h1>
+        <h1>Param</h1>
         <hr>
 
         <table border="1.5">
