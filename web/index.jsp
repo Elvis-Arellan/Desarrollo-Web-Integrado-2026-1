@@ -24,7 +24,7 @@
                         if (status == null) {
                             out.print("<p>Ver status</p>");
                         } else if ("true".equals(status)) {
-                            out.print("<p style='color:green;'>status 200</p>");
+                            out.print("<p style='color:green;'>200</p>");
                         }
                     %>
                 </td>
@@ -33,7 +33,7 @@
                         if (error == null) {
                             out.print("<p>Ver status</p>");
                         } else if ("true".equals(error)) {
-                            out.print(" <p style='color:red;'>Algo salio mal</p>");
+                            out.print(" <p style='color:red;'>404</p>");
                         }
                     %> 
                 </td>
