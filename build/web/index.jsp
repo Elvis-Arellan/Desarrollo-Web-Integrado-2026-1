@@ -1,6 +1,6 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%
-    String ok = request.getParameter("status");
+    String status = request.getParameter("status");
     String error = request.getParameter("error");
 %>
 <!DOCTYPE html>
@@ -21,9 +21,9 @@
             <tr>
                 <td>
                     <%
-                        if (ok == null) {
+                        if (status == null) {
                             out.print("<p>Ver status</p>");
-                        } else if ("true".equals(ok)) {
+                        } else if ("true".equals(status)) {
                             out.print("<p style='color:green;'>status 200</p>");
                         }
                     %>
