@@ -1,6 +1,6 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%
-    String ok = request.getParameter("ok");
+    String ok = request.getParameter("status");
     String error = request.getParameter("error");
 %>
 <!DOCTYPE html>
