@@ -15,7 +15,7 @@
 
         <table border="1.5">
             <tr>
-                <th><a href="index.jsp?ok=true">Status</a></th>
+                <th><a href="index.jsp?status=true">Status</a></th>
                 <th><a href="index.jsp?error=true">Error</a></th>
             </tr>
             <tr>
