@@ -2,6 +2,8 @@
 <%
     String status = request.getParameter("status");
     String error = request.getParameter("error");
+    String error2 = request.getParameter("error");
+    String error3 = request.getParameter("error");
 %>
 <!DOCTYPE html>
 <html>
