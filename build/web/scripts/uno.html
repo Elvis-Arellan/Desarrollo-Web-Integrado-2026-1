@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de validacion</title>
+</head>
+<body>
+
+    <form onsubmit="return validateForm()">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="Nombre">
+        <input type="submit" value="Enviar">
+    </form>
+
+    <script>
+        function validateForm() {
+            var name = document.getElementById("name").value;
+            if (name == "") {
+                alert("Cuadro de texto vacio");
+                return false;
+            }
+        }
+    </script>
+
+</body>
+</html>
+ 

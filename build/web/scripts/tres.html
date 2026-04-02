@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Data Registration Example</title>
+</head>
+<body>
+
+    <h2>User Registration</h2>
+
+    <!-- Formulario de registro -->
+    <form id="registrationForm" onsubmit="return validateForm()">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" placeholder="Enter your username" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required><br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required><br><br>
+
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password" required><br><br>
+
+        <input type="submit" value="Register">
+    </form>
+
+    <p id="result" style="color:red;"></p>
+
+    <script>
+        function validateEmail(email) {
+            // Expresión regular para validar el formato del correo electrónico
+            var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+            return emailPattern.test(email);
+        }
+
+        function validateForm() {
+            var username = document.getElementById("username").value;
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            var confirmPassword = document.getElementById("confirmPassword").value;
+            var resultMessage = "";
+
+            // Validar que los campos no estén vacíos
+            if (username == "" || email == "" || password == "" || confirmPassword == "") {
+                resultMessage = "All fields are required.";
+            } 
+            // Validar formato de correo electrónico
+            else if (!validateEmail(email)) {
+                resultMessage = "Please enter a valid email address.";
+            } 
+            // Validar longitud de la contraseña
+            else if (password.length < 8) {
+                resultMessage = "Password must be at least 8 characters long.";
+            } 
+            // Validar que las contraseñas coincidan
+            else if (password != confirmPassword) {
+                resultMessage = "Passwords do not match.";
+            } 
+            // Si todo es correcto, mostrar mensaje de éxito
+            else {
+                resultMessage = "Registration successful! Welcome, " + username + ".";
+                document.getElementById("result").style.color = "green";
+            }
+
+            // Mostrar el mensaje de resultado
+            document.getElementById("result").innerHTML = resultMessage;
+
+            // Evitar el envío real del formulario
+            return false;
+        }
+    </script>
+
+</body>
+</html>
